@@ -3,11 +3,22 @@ import socket
 
 class Server:
     def __init__(self) -> None:
-        pass
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.bind(("localhost",5050))
+        self.sock.listen()
+
+        conn, _ = self.sock.accept()
+        msg = conn.recv(1024)
+        print(msg.decode())
+
 
 class Client:
     def __init__(self) -> None:
-        pass
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.connect(("localhost", 5050))
+
+        self.sock.send(b"Hello World!")
+
 
 #####
 import sys

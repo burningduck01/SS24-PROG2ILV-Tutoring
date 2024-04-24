@@ -81,7 +81,7 @@ class Horse(Animal):
 
     @classmethod
     def create(cls, animal: Animal, color: str) -> Horse:
-        h = cls.__init__(color, animal.name, animal.food)
+        h = Horse(color, animal.name, animal.food)
         h.favorite = animal.favorite
         return Horse
     

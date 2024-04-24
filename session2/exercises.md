@@ -1,8 +1,6 @@
 # Session 2
 
-## exercise 1: Sockets
-
-In the exercise1 folder is already an exercise.py file defined, that if you want to use it, creates a **Server** object and executes the `run()` method in another thread. A **Client** object is also started by executing the `run()` method.
+In the exercise1 folder is already an exercise.py file defined, that if you want to use it, creates a **Server** object, executes it in another thread and creates a **Client** object in the main thread. So every code you put into the server object is executed like it's in another file in the background.
 
 ### Part 1: Sockets
 Create a TCP client server connection, enabeling the client sending a message to the server and printing the recieved massage in the server console.
