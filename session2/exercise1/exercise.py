@@ -17,7 +17,6 @@ class Client:
 
 #####
 import sys
-# from threading import Thread
 if __name__ == "__main__":
     if len(sys.argv) == 1:
     # if no commandline argument run server in other thread and run client
