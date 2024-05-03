@@ -21,6 +21,6 @@ Create an SQL Lite database and an user table (id, name, role, dob) and insert (
 
 In another file: Query all users from the database and print each row of the table.
 
-## exercise 4: generators
+## exercise 4: iterator
 
-Generate a class with generator methods called **MyList** that uses a list as an input and uses `__iter__` and `__next__` to iter through the whole list by index, returning  **self.list[i]**.
+Generate a class with iterator methods called **MyList** that uses a list as an input and uses `__iter__` and `__next__` to iter through the whole list by index, returning  **self.list[i]**.
