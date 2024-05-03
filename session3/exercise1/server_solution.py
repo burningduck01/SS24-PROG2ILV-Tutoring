@@ -1,16 +1,16 @@
 import socket
 
-server_addr = ("localhost", 5051)
+addr_server = ("localhost", 5051)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind(server_addr)
+sock.bind(addr_server)
 
 while True:
-    msg, client_addr = sock.recvfrom(1024)
+    msg, addr_client = sock.recvfrom(1024)
     msg = msg.decode()
     print("Request:", msg)
 
     msg = "\"" + msg + "\" acknowledged"
     msg = msg.encode()
-    sock.sendto(msg, client_addr)
+    sock.sendto(msg, addr_client)
 
