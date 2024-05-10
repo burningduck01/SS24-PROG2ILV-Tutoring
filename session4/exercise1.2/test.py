@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from solution import Customer
+from exercise import Customer
 
 engine = create_engine("sqlite:///database.db")
 session = sessionmaker(engine)()
